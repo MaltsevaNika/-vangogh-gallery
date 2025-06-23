@@ -1,0 +1,104 @@
+.symbols-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 18px;
+}
+
+.symbols-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.symbol-image {
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.symbol-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.symbol-card:hover .symbol-image img {
+  transform: scale(1.1);
+}
+
+.symbol-content {
+  padding: 25px;
+}
+
+.symbol-content h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: var(--dark-blue);
+}
+
+.symbol-examples {
+  margin-top: 20px;
+}
+
+.example-list {
+  list-style: none;
+}
+
+.example-list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.example-list li::before {
+  content: '•';
+  color: var(--gold);
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.symbol-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--teal);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.symbol-link:hover {
+  text-decoration: underline;
+}
+
+.symbol-detail {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.symbol-detail img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.symbol-analysis {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .symbols-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .symbol-image {
+    height: 200px;
+  }
+}

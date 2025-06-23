@@ -1,0 +1,148 @@
+/* Подключение шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+
+/* Главная секция */
+.hero {
+  background-color: #f8f4e8; /* Светло-желтый фон */
+  height: 60vh;
+  min-height: 400px;
+  max-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 3rem;
+  border-bottom: 8px solid #2a4a6b; /* Синяя акцентная полоса */
+}
+
+.hero-content {
+  width: 90%;
+  max-width: 1000px;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  color: #2a4a6b; /* Темно-синий */
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.hero p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #3a3a3a;
+  line-height: 1.6;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: #eac53f; /* Ярко-желтый */
+  color: #2a4a6b; /* Темно-синий */
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  box-shadow: 0 4px 0 rgba(42, 74, 107, 0.3);
+}
+
+.hero-btn:hover {
+  background-color: #f2d04b;
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(42, 74, 107, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+    min-height: 350px;
+  }
+  
+  .hero-content {
+    padding: 1.5rem;
+  }
+  
+  .hero-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
+/* Особенности */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 70px;
+}
+
+.feature-img {
+  height: 200px;
+  overflow: hidden;
+}
+
+.feature-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.feature-card:hover .feature-img img {
+  transform: scale(1.1);
+}
+
+.feature-content {
+  padding: 25px;
+}
+
+.feature-content h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.feature-link {
+  color: var(--teal);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.feature-link svg {
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+
+.feature-link:hover svg {
+  transform: translateX(5px);
+}
+
+/* Цитата */
+.quote-section {
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 80px 0;
+  margin: 70px 0;
+  text-align: center;
+}
+
+.quote {
+  font-size: 28px;
+  font-style: italic;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.quote-author {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
